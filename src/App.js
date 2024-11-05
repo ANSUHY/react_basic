@@ -9,7 +9,7 @@ import Mynav from './component/Mynav';
 
 class App extends Component {
 
-  /* 기본값 설정 */
+  // ==== 기본값 설정 
   constructor(props){
     super(props);
     this.max_menu_id = 3;
@@ -33,18 +33,14 @@ class App extends Component {
   
   }
 
-  /* 
-  함수 : data를 반환하는 함수
-  */
+  // ==== 함수 : data를 반환하는 함수
   getReadArticle(){
     let idx = this.state.menus.findIndex(item => (item.id === this.state.seleted_id));
     let data = this.state.menus[idx];
     return data;
   }
 
-   /* 
-  함수 : Articles가져오는 함수
-  */
+  // ==== 함수 : Articles가져오는 함수 
   getArticles(){
 
     let _title, _desc = null, _article=null;
@@ -99,8 +95,8 @@ class App extends Component {
                         _menus.push({id : this.max_menu_id, title: _title, desc: _desc})
                         
                         this.setState({
-                          menus:_menus,
                           mode:'read',
+                          menus:_menus,
                           seleted_id : this.max_menu_id
                         });
 
@@ -124,11 +120,10 @@ class App extends Component {
                         })
                         
                         this.setState({
-                          menus:_menus,
-                          mode:'read'
+                          mode:'read',
+                          menus:_menus
                         });
                       }}
-                    
                     
                     ></UpdateArticle>
     }

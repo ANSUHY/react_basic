@@ -21,8 +21,8 @@ class App extends Component {
         desc : "Welcome to FrontEnd"
       },
       subject : {
-        title : "기본기본",
-        desc : "기본내용"
+        title : "기본기본 개발자 역량",
+        desc : "기본내용 개발자"
       },
       menus : [
         {id : 1, title: "기본 : UI/UX 개발", desc: "기본 : UI/UX 내용내용"},
